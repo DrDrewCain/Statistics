@@ -9,10 +9,8 @@ The written language is in R where we will be computing numerous data sets as we
 - Build a function which:
 - takes as input a data frame, and the two elements of a frame that you want to model
 - Plot the data fit with a smoothing spline with the default cross validation, vs the smoothing spline with 2 degrees of freedom (linear fit).
-
-– Test the difference of fit using the F test
-
-– Plot the normal quantile quantile plots for the residuals
+- Test the difference of fit using the F test
+- Plot the normal quantile quantile plots for the residuals
 - Perform sqrt transformation on the data only if user wants to perform it (such as inputting a -1 or any value < 0) 
 #Run it on the NOAAnew data
 
