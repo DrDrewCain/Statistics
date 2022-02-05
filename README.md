@@ -24,11 +24,10 @@ Requirement -
 Assignment 3 gave me quite a headache to figure out because this course was my first time programming in R and I wasn't too familiar with the various techniques and libraries which R contains. Although, I knew that R was similar to Python and C I knew that it was a language that I still was not familiar with. So I spent a lot of time trying to read the various documentations that was widely available to help me figure out the ways to create this bootstrap function. 
 
 # Assignment 4 
-Do not copy my code. The following repository is to showcase my work as well as my logic on how to solve the assignment. It is not my fault if at any point a student copies my code as their own. Please keep in high regards to Academic Integrity before you think about copying my code. If discovered that my code has been copied I will be make this repository private.
+- requirement
+– Build a confidence interval estimator for the mean based on the bootstrap (use 10000 =nboot)
 
-–Build a confidence interval estimator for the mean based on the bootstrap (use 10000 =nboot)
-
-–Build a simulator that draws n samples form a lognormal distribution (rlnorm) and builds both the central limit theorem based confidence interval, and compares it to the coverage rate for the bootstrap (confidence interval based on the the bootstrap program). (1000 simulation runs minimum)
+– Build a simulator that draws n samples form a lognormal distribution (rlnorm) and builds both the central limit theorem based confidence interval, and compares it to the coverage rate for the bootstrap (confidence interval based on the the bootstrap program). (1000 simulation runs minimum)
 
 - Run it for lognormal (nsim=1000) for n=3,10,30,100, alpha= .1,.05 That’s 8 runs
 - Compare the coverage of the 2 confidence intervals with nominal coverage
