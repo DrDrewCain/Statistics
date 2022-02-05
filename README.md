@@ -25,9 +25,8 @@ Assignment 3 gave me quite a headache to figure out because this course was my f
 
 # Assignment 4 
 - requirement
-– Build a confidence interval estimator for the mean based on the bootstrap (use 10000 =nboot)
-
-– Build a simulator that draws n samples form a lognormal distribution (rlnorm) and builds both the central limit theorem based confidence interval, and compares it to the coverage rate for the bootstrap (confidence interval based on the the bootstrap program). (1000 simulation runs minimum)
+- Build a confidence interval estimator for the mean based on the bootstrap (use 10000 =nboot)
+- Build a simulator that draws n samples form a lognormal distribution (rlnorm) and builds both the central limit theorem based confidence interval, and compares it to the coverage rate for the bootstrap (confidence interval based on the the bootstrap program). (1000 simulation runs minimum)
 
 - Run it for lognormal (nsim=1000) for n=3,10,30,100, alpha= .1,.05 That’s 8 runs
 - Compare the coverage of the 2 confidence intervals with nominal coverage
