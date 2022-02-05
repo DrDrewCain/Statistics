@@ -19,7 +19,8 @@ The written language is in R where we will be computing numerous data sets as we
 Requirement - 
 - Build bootstrap pointwise confidence bands for smooth around the default smooth with smooth.spline. 
 - add the linear fit as well to see if it falls inside the bands or not.
-- For 20 points extra credit, do the bootstrapping without the residuals by taking the x,y pairs at random in bootstrapping process
+- To Do * do the bootstrapping without the residuals by taking the x,y pairs at random in bootstrapping process
 
 Assignment 3 gave me quite a headache to figure out because this course was my first time programming in R and I wasn't too familiar with the various techniques and libraries which R contains. Although, I knew that R was similar to Python and C I knew that it was a language that I still was not familiar with. So I spent a lot of time trying to read the various documentations that was widely available to help me figure out the ways to create this bootstrap function. 
 
+Do not copy my code. The following repository is to showcase my work as well as my logic on how to solve the assignment. It is not my fault if at any point a student copies my code as their own. Please keep in high regards to Academic Integrity before you think about copying my code. If discovered that my code has been copied I will be make this repository private.
