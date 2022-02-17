@@ -37,4 +37,4 @@ Assignment 3 gave me quite a headache to figure out because this course was my f
 - Code contaisn full comments. 
 
 # RIGHTS AND ACADEMIC INTEGRITY 
-- Do not copy my code. The following repository is to showcase my work as well as my logic on how to solve the assignment. It is not my fault if at any point a student copies my code as their own. Please keep in high regards to Academic Integrity before you think about copying my code. If discovered that my code has been copied I will be make this repository private.
+Dont be stupid
