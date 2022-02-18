@@ -24,7 +24,7 @@ vectorizedBootstrap1<-
 #    print(bootvec[1:100])
   #  print(mean(bootvec))
     
-    #create bootstrapped CI
+    #create bootstrapped CI qunatiles
     lowerq<-quantile(bootvec,alpha/2,na.rm=T) # Creates the lower quantile 
     upperq<-quantile(bootvec,1-alpha/2,na.rm=T) # Creates the upper quantile
 #    print(lowerq)
@@ -35,7 +35,7 @@ vectorizedBootstrap1<-
 #    print(LB)
 #    print(UB)
     
-    #create normal CI
+    #create normal CI bounds
     NLB<-mu0-(sd0/sqrt(n))*qnorm(1-alpha/2) # Normal CI Lowerbound
     NUB<-mu0+(sd0/sqrt(n))*qnorm(1-alpha/2) # Normal CI Upperbound 
 #    print(NLB)
@@ -44,7 +44,7 @@ vectorizedBootstrap1<-
     list(bootstrap.CI=c(LB,UB),normal.CI=c(NLB,NUB)) # Creates the boostrap CI
   }
 
-vectorizedBootstrap <- function(vec0,nboot=10000,alpha=0.1)
+vectorizedBootstrap <- function(vec0,nboot=10000,alpha=0.1) # This is most likely unnecessary. 
 {
   #vec0 = c(1:10)
   #pretend this is our theoretical sample data 
@@ -103,4 +103,4 @@ simulate <- function(mu.theoretical=3,n=30,nsim=1000,alpha=0.1)
   list(boot.coverage=(sum(confidencevec.boot)/nsim),norm.coverage=(sum(confidencevec.norm)/nsim))
 } 
 
-print(simulate(mu.theoretical = 3, n = 3, nsim = 1000, alpha = 0.1))
+print(simulate(mu.theoretical = 3, n = 3, nsim = 1000, alpha = 0.1)) # Test
