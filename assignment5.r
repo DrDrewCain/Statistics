@@ -73,3 +73,6 @@ matrix.2ndorder.make <-function(x, only.quad=T){
  Auto.mat<-data.matrix(Auto)
 #plot(Auto.mat)
 leaps.then.press.plot(Auto.mat[,-1],Auto.mat[,1])
+
+
+# To be updated to include the LARS function. Will most likely switch some formats for the LEAPS
