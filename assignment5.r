@@ -1,9 +1,10 @@
 #ASSIGNMENT 5 
 #Uses Leaps 
 #To be added
+# To be updated to include the LARS function. Will most likely switch some formats for the LEAPS
 
 leaps.pck <- c("leaps.pck", "leaps.then.press.plot", "regpluspress", "matrix.2ndorder.make")
-leaps.then.press.plot <- function(xmat0,yvec,ncheck=5,print.ls=F, resid.plot=F) 
+my.xy.function <- function(xmat0=mat.train,yvec,ncheck=5,print.ls=F, resid.plot=F) 
 #uses leaps as well as PRESS and quadratic fits to find the best fit linear/quadratic regression on a data set
 {
  #initialize plot dimensions (i.e 5 graphs with one row of three and a second row of two)
@@ -75,4 +76,3 @@ matrix.2ndorder.make <-function(x, only.quad=T){
 leaps.then.press.plot(Auto.mat[,-1],Auto.mat[,1])
 
 
-# To be updated to include the LARS function. Will most likely switch some formats for the LEAPS
