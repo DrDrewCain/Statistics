@@ -25,13 +25,13 @@ my.xy.function <- function(xmat0=mat.train,yvec,ncheck=5,print.ls=F, resid.plot=
         if(print.ls){
             ls.print(ls.str0)
  }
-    print(i) #print plot number outputted at the ith run through the loop
-    print(paste("Press=",ls.str0$press)) #PRESS (predicted residual error sum of squares) is an actual prediction with parts of the system left out, press will be returned as a statistic value 
+#     print(i) #print plot number outputted at the ith run through the loop
+#     print(paste("Press=",ls.str0$press)) #PRESS (predicted residual error sum of squares) is an actual prediction with parts of the system left out, press will be returned as a statistic value 
     parvec<-matwhich[i,] #store data from plots extracted by leaps
     npar<-sum(parvec) #take sum of data from laps
-    print(paste("MPSE=",ls.str0$press/(length(yvec)-(npar+1)))) #calculate Mean Squared Prediction Error (MPSE) using PRESS data, sample size, and leaps data
-    MPSE<-floor(1000*ls.str0$press/(length(yvec)-(npar+1)))/1000 #save MPSE value to print out with plots
-    print(paste("Cp-p=",z2[i])) #print Cp-p values, leaps should have helped us select the top 5 lowest Cp-p values
+#     print(paste("MPSE=",ls.str0$press/(length(yvec)-(npar+1)))) #calculate Mean Squared Prediction Error (MPSE) using PRESS data, sample size, and leaps data
+#     MPSE<-floor(1000*ls.str0$press/(length(yvec)-(npar+1)))/1000 #save MPSE value to print out with plots
+#     print(paste("Cp-p=",z2[i])) #print Cp-p values, leaps should have helped us select the top 5 lowest Cp-p values
     ypred<-cbind(1,xmat[,matwhich[i,]])%*%ls.str0$coef 
     #creates ypred column sizes for the  plots's y axis, (i.e the 10,15,20,25 breakdown)
  
