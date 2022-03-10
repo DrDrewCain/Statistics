@@ -8,22 +8,23 @@ y_mat <- auto.mat[,1] # get mpg from matrix of Auto data
 x.auto2 <- matrix.2ndorder.make(auto.mat[,-1])
 
 
-my.boot.xy<-function(data=Auto,xstring="leaps",brep=1000){ #specialized version of bootstrap
+LeapsandLars<-function(data=Auto,xstring="leaps",brep=1000){ #specialized version of bootstrap
   auto.mat<-as.matrix(Auto[,-9])
   y_mat <- auto.mat[,1] # get mpg from matrix of Auto data
   x.auto2 <- matrix.2ndorder.make(auto.mat[,-1])
- # Determine whether the chosen model is lars
-  if(xstring=="lars"){
-    library(lars)
-    out0 <- my.cp.extract.lars1(lars(x.auto2,y_mat),x.auto2,y_mat)
-    # string = lars(mat.train, y)
-  }
+
   # Determine whether the chosen model is leaps 
   if(xstring=="leaps"){
  
     library(leaps)
     out0 <- my.cp.extract.leaps2(leaps(x.auto2[,-c(29,32,34,35)],y_mat), x.auto2,y_mat)
   }
+ # Determine whether the chosen model is lars
+  if(xstring=="lars"){
+    library(lars)
+    out0 <- my.cp.extract.lars1(lars(x.auto2,y_mat),x.auto2,y_mat)
+    # string = lars(mat.train, y)
+  }  
 }
 # Below calculates the PRESS value (calculation for PRESS)
 PRESS<-function(x,y){
@@ -108,3 +109,11 @@ my.cp.extract.lars1<- function(str, matrix.train=x.auto2, y=y_mat){
   plot(y_pred1, y) # Plots the predictor vs actual value 
 
 }
+
+Auto.mat.japan<-Auto.mat[Auto.mat[,8]==3,]
+Auto.mat.germany<-Auto.mat[Auto.mat[,8]==2,]
+Auto.mat.usa<-Auto.mat[Auto.mat[,8]==1,]
+my.boot.xy(Auto.mat,xstring="lars",brep=1000)
+my.boot.xy(Auto.mat.germany,xstring="lars",brep=1000)
+my.boot.xy(Auto.mat.usa,xstring="lars",brep=1000)
+my.boot.xy(Auto.mat.japan,xstring="lars",brep=1000)
