@@ -51,5 +51,4 @@ Assignment 3 gave me quite a headache to figure out because this course was my f
 Comment on whether the variables might indicate something about different countries design philosophies.
 
 # RIGHTS AND ACADEMIC INTEGRITY 
-Dont be stupid.
 Compromises of all the codes I've written for Statistical & Computing AppStat (486) at Rutgers University. Please do not copy my code. All work are copy righted and reserved. If you copy my code and submit as your own, you will get in trouble for failure to comply to academic integrity. All codes shown are to be used as reference unless with explicit permission.
