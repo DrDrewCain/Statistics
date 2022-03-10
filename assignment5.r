@@ -5,10 +5,10 @@ library(lars)
 auto.mat<-as.matrix(Auto[,-9]) # 8 varibales
 
 y_mat <- auto.mat[,1] # get mpg from matrix of Auto data
-x.auto2 <- matrix.2ndorder.make(auto.mat[,-1])
+x.auto2 <- matrix.2ndorder.make(auto.mat[,-1]) # creates 2nd order matrix
 
 
-LeapsandLars<-function(data=Auto,xstring="leaps",brep=1000){ #specialized version of bootstrap
+LeapsandLars<-function(data=Auto,xstring="leaps"){ 
   auto.mat<-as.matrix(Auto[,-9])
   y_mat <- auto.mat[,1] # get mpg from matrix of Auto data
   x.auto2 <- matrix.2ndorder.make(auto.mat[,-1])
@@ -67,7 +67,7 @@ matrix.2ndorder.make<-function(x, only.quad=F){
 }
 
 
-my.cp.extract.leaps2<-function(str,matrix.train,y=y_mat){
+extract.leaps1<-function(str,matrix.train,y=y_mat){
   # y_mat <- auto.mat[,1]
   # auto.mat<-as.matrix(Auto[,-9])
   o1<-order(str$Cp)
@@ -90,7 +90,7 @@ my.cp.extract.leaps2<-function(str,matrix.train,y=y_mat){
 }
 
 
-my.cp.extract.lars1<- function(str, matrix.train=x.auto2, y=y_mat){
+extract.lars1<- function(str, matrix.train=x.auto2, y=y_mat){
   o1<-order(str$Cp)
   # low5_cp<-str$Cp[o1[1:5]]
  
@@ -113,7 +113,7 @@ my.cp.extract.lars1<- function(str, matrix.train=x.auto2, y=y_mat){
 Auto.mat.japan<-Auto.mat[Auto.mat[,8]==3,]
 Auto.mat.germany<-Auto.mat[Auto.mat[,8]==2,]
 Auto.mat.usa<-Auto.mat[Auto.mat[,8]==1,]
-my.boot.xy(Auto.mat,xstring="lars",brep=1000)
-my.boot.xy(Auto.mat.germany,xstring="lars",brep=1000)
-my.boot.xy(Auto.mat.usa,xstring="lars",brep=1000)
-my.boot.xy(Auto.mat.japan,xstring="lars",brep=1000)
+LeapsandLars(Auto.mat,xstring="lars")
+LeapsandLars(Auto.mat.germany,xstring="lars")
+LeapsandLars(Auto.mat.usa,xstring="lars")
+LeapsandLars(Auto.mat.japan,xstring="lars")
