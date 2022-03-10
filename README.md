@@ -5,7 +5,7 @@ The written language is in R where we will be computing numerous data sets as we
 
 # Assignment 2 is to create a smooth.spline function using the data NOAA or NOAANew and create a linearfit, and a default fit, perform sqrt transformation, and plot the various qq-plot as required. 
 
-#Assignment 2 requirement-
+# Assignment 2 requirement-
 - Build a function which:
 - takes as input a data frame, and the two elements of a frame that you want to model
 - Plot the data fit with a smoothing spline with the default cross validation, vs the smoothing spline with 2 degrees of freedom (linear fit).
@@ -36,7 +36,7 @@ Assignment 3 gave me quite a headache to figure out because this course was my f
 - (Solo) 
 - Code contaisn full comments. 
 
-#Assignment 5
+# Assignment 5
 # Requirement
 - Functionality Automatic model selection:
 
