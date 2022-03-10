@@ -8,7 +8,7 @@ y_mat <- auto.mat[,1] # get mpg from matrix of Auto data
 x.auto2 <- matrix.2ndorder.make(auto.mat[,-1])
 
 #main function
-my.boot.xy<-function(data=Auto,xstring="leaps",brep=1000){
+LeapsandLars<-function(data=Auto,xstring="leaps"){
   auto.mat<-as.matrix(Auto[,-9])
   # get mpg from matrix of Auto data
   y_mat <- auto.mat[,1] 
