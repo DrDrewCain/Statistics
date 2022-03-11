@@ -20,7 +20,7 @@ press <- function(x, y, smoother, parm) {
     mod <- smoother(x, y, parm) 
   }
   stud_e <- as.vector(mod$resid)/(1-diag(mod$smat))
-  stud_e[!is.finite(stud_e)] <- 0
+  #  stud_e[!is.finite(stud_e)] <- 0
   PRESS <- sum(stud_e^2)
   return(PRESS)
 }
