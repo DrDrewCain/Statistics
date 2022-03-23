@@ -20,7 +20,7 @@ press <- function(x, y, smoother, parm) {
     mod <- smoother(x, y, parm) 
   }
   stud_e <- as.vector(mod$resid)/(1-diag(mod$smat))
-  #  stud_e[!is.finite(stud_e)] <- 0
+  #stud_e[!is.finite(stud_e)] <- 0
   PRESS <- sum(stud_e^2)
   return(PRESS)
 }
@@ -61,7 +61,7 @@ adj_parm <- function(x, y, smoother, parm, max_iter = 1000) {
   return(output)
   }
 
-NOAA1<-read.csv("NOAANew.csv")
+NOAA1 <- read.csv("C:\\Users\\Avata\\OneDrive - Rutgers University\\Desktop\\Statistics 486\\smoother.r")
 adj_bin_mean <- adj_parm(NOAA1[,3], NOAA1[,2], bin.mean, 6)
 adj_gauss_mean <- adj_parm(NOAA1[,3], NOAA1[,2], gauss.mean, 0.063)
 adj_gauss_reg <- adj_parm(NOAA1[,3], NOAA1[,2], gauss.reg, 0.078)
