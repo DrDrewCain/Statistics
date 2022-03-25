@@ -61,7 +61,7 @@ adj_parm <- function(x, y, smoother, parm, max_iter = 1000) {
   return(output)
   }
 
-NOAA1 <- read.csv("C:\\Users\\Avata\\OneDrive - Rutgers University\\Desktop\\Statistics 486\\smoother.r")
+NOAA1 <- read.csv("NOAANew_csv")
 adj_bin_mean <- adj_parm(NOAA1[,3], NOAA1[,2], bin.mean, 6)
 adj_gauss_mean <- adj_parm(NOAA1[,3], NOAA1[,2], gauss.mean, 0.063)
 adj_gauss_reg <- adj_parm(NOAA1[,3], NOAA1[,2], gauss.reg, 0.078)
