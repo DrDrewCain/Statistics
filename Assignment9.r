@@ -1,24 +1,36 @@
-fdr<-function(v1,Q,independence.int) {
+# # The function name is FDR (false discovery rate) and the arguments being passed into this
+# function are vector1 (vector of sample P values), alpha is the alpha level of the tests, Independence.int is
+# a boolean variable that changes based on user input between being independent and not being
+# independent
 
-order<-order(v1)
-pvec<-v1[order]
-VectorLength<-length(v1)
-if(independence.int) {
-qline<-Q*c(1:order)/order
+fdr<-function(vector1,alpha, independence.int){
+# Puts in ascending order
+ascendOrder<-order(vector1)
+# Puts in the ordered list into vector vector1
+pvec<-vector1[ascendOrder]
+# Length of the vector
+veclength<-length(vector1)
+# If it’s independent run this block
+if(independence.int){
+# creates a line that the sorted p-values are compared to
+  alphaline<-alpha*c(1:veclength)/veclength
 }
- else{
-  Dependency<-c(1/1:order)
-  qline<-Q*c(1:order)/order*(sum(Dependency))
+# If it’s not independent run this block
+else{
+  Dependent <- c(1/1:veclength)
+# creates a line that the sorted p-values are compared to
+  alphaline <- alpha*c(1:veclength)/(veclength*(sum(Dependent)))
 }
-
-plot(c(c(1:order),c(1:order)),c(qline,pvec),type="n",xlab="hypothesis",ylab="pvalue")
-lines(c(1:order),qline)
-points(c(1:order),pvec)
-dv<-pvec-qline
-pmax<-max(pvec[I1])
-I2<-pvec<=pmax
-points(c(1:m)[I2],pvec[I2],col="red")
-o1[I2]
-v1<- (c((1e-5*runif(100)),runif(900)))
-fdr(v1, 0.05, T)
+# plots a sorted list of p-values
+plot(c(c(1:veclength),c(1:veclength)),c(alphaline,pvec),type="n",xlab="hypothesis",ylab="pvalue")
+lines(c(1:veclength),alphaline)
+points(c(1:veclength),pvec)
+#subtracting the pvec and alphaline
+dv<-pvec-alphaline
+Index1<-(dv<0)
+pmax<-max(pvec[Index1])
+Index2<-pvec<=pmax
+points(c(1:veclength)[Index2],pvec[Index2],col="red")
+ascendOrder[Index2]
 }
+vector1<- (c((1e-5*runif(100)),runif(900))) 
