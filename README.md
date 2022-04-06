@@ -50,5 +50,37 @@ Assignment 3 gave me quite a headache to figure out because this course was my f
        The 3 Auto data sets  modeling mpg with the full 2nd order matrix based on separating by country of origin
 Comment on whether the variables might indicate something about different countries design philosophies.
 
+# Assignment 6 
+# Requirement 
+- Try animate(mystery9) in R. Then try pairs, lattice.
+- If anything like an animal appears google the name of that animal with the words “effect”
+- Describe what you saw, describe what you found and describe how you think the curse of dimensionality may have kept you from seeing it with animate quickly.
+
+# Assignment 7
+# Requirement
+
+- Create a function that takes the output of each smoother in smoother.pck and calculates its press statistic.
+- Apply each to the NOAA.new data using the parameters given
+- Now create a function that uses a greedy random search to find better values of the adjustable parameters, based on minimizing PRESS
+
+# Assignment 8
+# Requirement
+
+- Rewrite the bootstrap program you wrote for assignment 4
+- Where you are taking the mean, put in a user provided statistical function
+- Everyplace you take a standard deviation, use a different bootstrap program to calculate the standard error of your statistic instead.
+- So inside the bootstrap loop in the main program, you call a different bootstrap program to estimate variance.
+- Apply both the original bootstrap confidence estimate of the mean, and your new bootstrap using the median as the estimate of location to the data set special.sample - in xy.pck. Provide the 95% confidence intervals.
+
+# Assignment 9
+# Requirement
+
+- Constuct an FDR program using the basic approach
+- Input : Vector of P values Q value (desired false discovery rate) Are the data independent or not? (T,F input)
+- Output
+- Graph like that in slide 14
+- The Tests that are considered discoveries (“interesting”) from the original order of the p values
+- Whether you assumed independence or not. Comment your code
+- Test your code with the vector v1<- (c((1e-5*runif(100)),runif(900))) both assuming independent and not independent at Q=.05 
 # RIGHTS AND ACADEMIC INTEGRITY 
 Compromises of all the codes I've written for Statistical & Computing AppStat (486) at Rutgers University. Please do not copy my code. All work are copy righted and reserved. If you copy my code and submit as your own, you will get in trouble for failure to comply to academic integrity. All codes shown are to be used as reference unless with explicit permission.
