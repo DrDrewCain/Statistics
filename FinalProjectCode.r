@@ -33,7 +33,7 @@ library(BSDA)
 
 #### Plotting the attributes of the top 100 songs - Graph and analysis of the attributes of the top 100 songs in 2020 and 2021 ####
 
-top2020<-read.csv("C:\\Users\\Avata\\Documents\\Statistics&DataScience\\data\\spotify_dataset.csv")
+top2020<-read.csv("spotify_dataset")
 
 # Multiplying the attributes by 10 to make them better
  top2020$Danceability<- top2020$Danceability*(100)
